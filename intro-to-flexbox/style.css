@@ -25,7 +25,15 @@ h3 {
 /* --- Groups & Items --- */
 
 .group {
+  display: flex;
+  flex-direction: row; /* or column, or row-reverse, or column-reverse */
 }
 
 .item {
+  flex: 1; /* tells the above flex container that each item should be the same width regardless of content*/
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
 }
