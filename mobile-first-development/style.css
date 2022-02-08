@@ -1,3 +1,27 @@
+/* Graceful Degradation: desktop-first approach that involves designing the web page layout for larger screens, then adding media queries to remove features and rearrange elements to fit a smaller screen */
+/* body {
+  background-color: green;
+} */
+
+/* This applies from 0px to 600px */
+/* @media all and (max-width: 600px) {
+  body {
+    background-color: red;
+  }
+} */
+
+/* Progressive Enhancement: designing for the smallest screen first, then progressively adding features and rearranging the layout to take advantage of larger screen sizes */
+/* body {
+  background-color: red;
+} */
+
+/* This applies from 600px and larger */
+/* @media all and (min-width: 600px) {
+  body {
+    background-color: green;
+  }
+} */
+
 main {
   padding: 20px 0;
 }
@@ -24,7 +48,7 @@ h3 {
 
 .group {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 100px;
 }
 
@@ -35,4 +59,17 @@ h3 {
 
 .item-double {
   flex: 2;
+}
+
+/* Groups and items (Desktop) */
+
+@media all and (min-width: 800px) {
+  section,
+  h1 {
+    padding: 0 10%;
+  }
+
+  .group {
+    flex-direction: row;
+  }
 }
