@@ -1,0 +1,18 @@
+/* @media <media type> (<media features>) {
+    <CSS Rules>
+  }
+
+  <media type> = all, print, screen, or speech
+  <media features> = width, height, orientation
+
+*/
+
+p {
+  font-size: 14px;
+}
+
+@media all and (min-width: 800px) {
+  p {
+    font-size: 24px;
+  }
+}
